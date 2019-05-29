@@ -1,0 +1,38 @@
+.slider {
+  display: flex;
+  justify-content: space-between;
+
+  width: 63px;
+}
+
+.slider__btn {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+
+  cursor: pointer;
+  background-color: #bec2c7;
+  border-radius: 50%;
+  border: 3px solid;
+  border-color: inherit;
+}
+
+.slider__btn--current {
+  width: 12px;
+  height: 12px;
+
+  background-color: #ffffff;
+  border: 3px solid @dark-grey;
+}
+
+// * * * * * * * * * * T A B L E T * * * * * * * * * *
+
+@media (min-width: @tablet-width) {
+  // Unexpected empty block   block-no-empty
+}
+
+// * * * * * * * * * * D E S K T O P * * * * * * * * * *
+
+@media (min-width: @desktop-width) {
+  // Unexpected empty block   block-no-empty
+}

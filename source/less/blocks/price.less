@@ -1,0 +1,276 @@
+.price {
+  padding-top: 133px;
+  padding-bottom: 47px;
+
+  background-image: linear-gradient(175deg, white 14%, @light-grey 14%);
+}
+
+.price__container {
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.price__table {
+  display: flex;
+  flex-direction: row;
+
+  position: relative;
+  left: 0;
+  transform: translateX(-200%);
+}
+
+.price__column {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+
+  width: 100%;
+
+  background-color: #ffffff;
+}
+
+.price__data {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  box-sizing: border-box;
+  min-width: 280px;
+  min-height: 60px;
+  padding-top: 18px;
+  padding-left: 20px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: @dark-grey;
+
+  text-align: left;
+  text-transform: uppercase;
+
+  border: 1px solid #e5e5e5;
+}
+
+.price__data--header {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 100px;
+  padding: 22px;
+  padding-bottom: 12px;
+
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: @dark-grey;
+  border: 1px solid #e5e5e5;
+}
+
+.price__data--empty {
+  background-color: #f2f2f2;
+
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.price__data--yes,
+.price__data--no {
+  position: relative;
+}
+
+.price__data--yes::after,
+.price__data--no::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  width: 31px;
+  height: 27px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.price__data--yes::after {
+  background-image: url("../img/icon-yes.svg");
+  background-size: 31px;
+}
+
+.price__data--no::after {
+  background-image: url("../img/icon-no.svg");
+  background-size: 27px;
+}
+
+.price__rate-name {
+  margin-top: 0;
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.price__rate-name--hit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 74px;
+  height: 73px;
+
+  background-image: url("../img/bg-hit.svg");
+}
+
+.price__rate-name--hit::after {
+  content: "хит";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+
+  width: 74px;
+  height: 73px;
+
+  font-weight: 400;
+  font-size: 14px;
+
+  transform: rotate(-45deg);
+}
+
+.price__rate-price {
+  margin: 0;
+
+  font-weight: 300;
+  font-size: 24px;
+}
+
+.price__slider {
+  margin: 0 auto;
+  margin-top: 42px;
+
+  border-color: @light-grey;
+}
+
+// * * * * * * * * * * T A B L E T * * * * * * * * * *
+
+@media (min-width: @tablet-width) {
+  .price {
+    padding-top: 110px;
+    padding-bottom: 73px;
+
+    background-image: linear-gradient(176deg, white 17%, @light-grey 17%);
+  }
+
+  .price__container {
+    padding: 0;
+    width: 620px;
+
+    overflow: visible;
+  }
+
+  .price__table {
+    position: relative;
+    left: 0;
+    transform: none;
+  }
+
+  .price__column {
+    flex-shrink: 0;
+    width: 25%;
+
+    background-color: #ffffff;
+  }
+
+  .price__data {
+    min-width: 0;
+    min-height: 46px;
+    padding-top: 11px;
+
+    text-transform: none;
+  }
+
+  .price__data--header {
+    padding-top: 18px;
+    min-height: 79px;
+
+    text-transform: uppercase;
+  }
+
+  .price__data--yes::after,
+  .price__data--no::after {
+    top: 10px;
+    right: 60px;
+  }
+
+  .price__rate-name {
+    margin-bottom: 9px;
+    font-size: 16px;
+  }
+
+  .price__rate-name--hit::before {
+    width: 61px;
+    height: 61px;
+
+    background-image: url("../img/bg-hit-tablet.svg");
+  }
+
+  .price__rate-name--hit::after {
+    top: 2px;
+    left: 2px;
+  }
+
+  .price__rate-price {
+    font-size: 18px;
+  }
+
+  .price__option {
+    display: none;
+  }
+
+  .price__slider {
+    display: none;
+  }
+}
+
+// * * * * * * * * * * D E S K T O P * * * * * * * * * *
+
+@media (min-width: @desktop-width) {
+  .price {
+    padding-top: 188px;
+    padding-bottom: 98px;
+
+    background-image: linear-gradient(176.2deg, white 19%, @light-grey 19%);
+  }
+
+  .price__container {
+    width: 940px;
+  }
+
+  .price__data {
+    padding-top: 20px;
+    min-height: 60px;
+
+    font-size: 18px;
+  }
+
+  .price__data--header {
+    min-height: 100px;
+  }
+
+  .price__data--yes::after,
+  .price__data--no::after {
+    top: 17px;
+    right: 100px;
+  }
+
+  .price__rate-name {
+    font-size: 18px;
+
+    margin-bottom: 12px;
+  }
+
+  .price__rate-price {
+    font-size: 24px;
+  }
+}
